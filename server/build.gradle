@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'com.rs.GameLauncher'
+version = '1.0.0'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Jar) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
+
+run {
+    standardInput = System.in
+}
+
+dependencies {
+    implementation 'libs:JDA-3.8.0_423-withDependencies'
+    implementation 'libs:netty-3.7.0.Final'
+    implementation 'libs:lzma-4.63-jio-0.94'
+    implementation 'libs:minifs_v1'
+    implementation 'libs:guava-18.0'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': "$mainClassName"
+    }
+    from { configurations.compileClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+}

@@ -1,0 +1,76 @@
+package com.rs.game;
+
+public class Capes {
+	public enum CapesData {
+
+		ATTACK(9747, 34540, 9748, 34542, 34246, 34541, 34247, 34543),
+		STRENGTH(9750, 34545, 9751, 34547, 34248, 34546, 34249, 34548),
+		DEFENCE(9753, 34550, 9754, 34552, 34250, 34551, 34251, 34553),
+		RANGING(9756, 34555, 9757, 34557, 34252, 34556, 34253, 34558),
+		PRAYER(9759, 34560, 9760, 34562, 34254, 34561, 34255, 34563),
+		MAGIC(9762, 34565, 9763, 34567, 34256, 34566, 34257, 34568),
+		RUNECRAFTING(9765, 34570, 9766, 34572, 34258, 34571, 34257, 34573),
+		CONSTITUTION(9768, 34580, 9769, 34582, 34262, 34581, 34257, 34583),
+		AGILITY(9771, 34585, 9772, 34587, 34264, 34586, 34257, 34588),
+		HERBLORE(9774, 34590, 9775, 34592, 34266, 34591, 34257, 34593),
+		THIEVING(9777, 34595, 9778, 34597, 34268, 34596, 34257, 34598),
+		CRAFTING(9780, 34600, 9781, 34602, 34270, 34601, 34257, 34603),
+		FLETCHING(9783, 34605, 9784, 34607, 34272, 34606, 34257, 34608),
+		SLAYER(9786, 34610, 9787, 34612, 34274, 34611, 34257, 34613),
+		CONSTRUCTION(9789, 34615, 9790, 34617, 34616, 34566, 34257, 34618),
+		MINING(9792, 34620, 9793, 34622, 34278, 34621, 34257, 34623),
+		HUNTER(9948, 34575, 9949, 34577, 34260, 34576, 34261, 34578),
+		SMITHING(9795, 34625, 9796, 34627, 34280, 34626, 34281, 34628),
+		FISHING(9798, 34630, 9799, 34632, 34282, 34631, 34283, 34633),
+		COOKING(9801, 34635, 9802, 34637, 34284, 34636, 34285, 34638),
+		FIREMAKING(9804, 34640, 9805, 34642, 34286, 34641, 34287, 34643),
+		WOODCUTTING(9807, 34645, 9808, 34647, 34288, 34646, 34289, 34648),
+		FARMING(9810, 34650, 9811, 34652, 34290, 34651, 34291, 34653),
+		SUMMONING(12169, 34665, 12170, 34667, 34296, 34666, 34297, 34668),
+		DUNGEONEERING(18508, 34660, 18509, 34662, 34294, 34661, 34295, 34663),
+		DIVINATION(29185, 34655, 29186, 34657, 34292, 34656, 34293, 34658),
+		INVENTION(36351, 36789, 36352, 36791, 36353, 36790, 36354, 36792);
+
+		private final int[] capes;
+		
+		private CapesData(final int... capes) {
+			this.capes = capes;
+		}
+
+		public final int getRegularCapeId() {
+			return capes[0];
+		}
+
+		public final int getRegularRetroCapeId() {
+			return capes[1];
+		}
+
+		public final int getTrimmedCapeId() {
+			return capes[2];
+		}
+
+		public final int getTrimmedRetroCapeId() {
+			return capes[3];
+		}
+
+		public final int getHoodedCapeId() {
+			return capes[4];
+		}
+
+		public final int getHoodedRetroCapeId() {
+			return capes[5];
+		}
+
+		public final int getHoodedTrimmedCapeId() {
+			return capes[6];
+		}
+
+		public final int getHoodedTrimmedRetroCapeId() {
+			return capes[7];
+		}
+		
+		public final int[] getAllCapes() {
+			return capes;
+		}
+	}
+}

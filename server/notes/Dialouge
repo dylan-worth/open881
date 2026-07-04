@@ -1,0 +1,37 @@
+For Dialogue, we're just creating a class under the Server/src/main/java/com/rs/game/player/dialogues/cities/ and
+either creating a city directory or we are using an existing.
+
+To be less sloppy unless you have multiple npcs such as a quest, we're going to define the npcID.
+
+private int npcId == whatever the npc id is.
+
+private means that the variable is only being used in this class, int is short for integer since we the id is
+a whole number.
+
+Facial Expressions that are defined: NORMAL,QUESTIONS,MAD,MOCK,LAUGHING,WORRIED, HAPPY, CONFUSED,DRUNK, ANGRY, SAD, SCARED.
+
+To send a player chat: sendPlayerDialogue(FacialExpression, "A random string");
+To send a Npc Chat: sendNPCDialogue(npcId, FacialExpression, "String");
+To send am Option chat: sendOptionDialouge(title, "options", "options";
+
+For Option Dialogue, you can use only one option if you'd like but that's lame when you could use a player dialogue as a reponse without
+the options.
+
+The title is what you see at the top of the options interface.
+
+You start under "start" and you either send player dialogue, options, or npc dialogue.
+Once you've added this, you declare the stage of dialogue you are on. We always start with -1
+
+It should look like this: stage = -1;
+
+Under the run function -> run()
+
+We start to add more. For example, We declare the stage now.
+if ( stage == -1 ) { sendNPCDialogue(npcId, HAPPY, "Wow, learning how to write Dialogue is so much fun!" );
+
+So if is a statement ( if this happens then do this ), We are saying if the stage is equal to -1, we continue with this. We sent the npc dialogue
+and now we close with setting the stage.
+
+if ( stage == -1 ) { sendNPCDialogue(npcId, HAPPY, "Wow, learning how to write Dialogue is so much fun!" );
+stage = 0;
+}
