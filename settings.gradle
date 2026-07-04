@@ -1,0 +1,15 @@
+rootProject.name = 'open881'
+
+dependencyResolutionManagement {
+    repositories {
+        mavenCentral()
+        flatDir {
+            dirs 'server/libs'
+        }
+    }
+}
+
+include(
+    'client',
+    'server'
+)
